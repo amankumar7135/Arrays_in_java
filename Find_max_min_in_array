@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class MinMaxArray {
+
+    // Method to find the minimum value in the array
+    public static int findMin(int[] numbers) {
+        int min = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] < min) {
+                min = numbers[i];
+            }
+        }
+        return min;
+    }
+
+    // Method to find the maximum value in the array
+    public static int findMax(int[] numbers) {
+        int max = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+        }
+        return max;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user for the number of elements
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+
+        // Initialize the array
+        int[] numbers = new int[n];
+
+        // Prompt user to enter each element
+        System.out.println("Enter " + n + " integers:");
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        // Find minimum and maximum values using the methods
+        int min = findMin(numbers);
+        int max = findMax(numbers);
+
+        // Display the results
+        System.out.println("Minimum value: " + min);
+        System.out.println("Maximum value: " + max);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
