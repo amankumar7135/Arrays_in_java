@@ -1,0 +1,15 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public int[] removeDuplicates(int[] nums) {
+    Set<Integer> uniqueNums = new HashSet<>();
+    for (int num : nums) {
+        uniqueNums.add(num);
+    }
+    int[] result = new int[uniqueNums.size()];
+    int index = 0;
+    for (int num : uniqueNums) {
+        result[index++] = num;
+    }
+    return result;
+}
