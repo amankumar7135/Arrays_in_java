@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Duplicate_in_array {
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+        int numofelement=sc.nextInt();
+        int[] arr=new int[numofelement];
+        for(int i=0;i<numofelement;i++){
+            arr[i]=sc.nextInt();
+        }
+
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    System.out.println(arr[i]);
+                }
+            }
+        }
+}}
